@@ -14,3 +14,11 @@ DELETE      /places/:id                 Delete a particular place
 POST        /places/:id/rant            Create a rant (comment) about a place
 DELETE      /places/:id/rant/:rantId    Delete a rant (comment) about a place       
 GET         *                           404 Error page
+
+The data made available in this app for restaurants will be
+id = Restaurant ID 
+name = Name of Restaurant
+city = location of restaurant
+state = state name
+cuisines = type of food
+pic = picture of restaurant, menu or a dish

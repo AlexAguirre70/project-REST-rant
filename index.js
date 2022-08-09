@@ -14,6 +14,10 @@ app.engine('jsx',require('express-react-views').createEngine())
 app.get('/',(req,res)=>{
     res.render('home')
 })
+app.get('/places', (req,res)=>{
+    res.render('places/index')
+})
+
 app.get('*',(req,res)=>{
     res.render('error404')
 

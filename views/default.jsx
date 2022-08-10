@@ -1,5 +1,7 @@
+// This includes the REACT middleware that allows us to write html and JS in server side rendering
 const React = require('react')
 
+//The Default function that writes the basic view html framwework, pulls in bootstrap css and the custom css stylesheets
 function Def (html) {
     return (
         <html>
@@ -14,7 +16,6 @@ function Def (html) {
         </html>
     )
   }
-  
-
+// Exports the Default module to be able to use in other views
 module.exports = Def
 

@@ -2,19 +2,15 @@ h1 {
     text-align: center;
     color: cornflowerblue;
   }
-  button{
-    display: flex;
+button {
     background-color: cornflowerblue;
     color: white;
-    justify-content: center;
-   align-items: center;
-   
+    
   }
-  div{
+  div, p {
     text-align: center;
   }
   img {
-
     width: 400px;
     height: auto;
     margin: 20px;

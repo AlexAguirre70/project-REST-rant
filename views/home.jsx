@@ -9,9 +9,11 @@ function home () {
     return (
       <Def>
           <main>
-              <h1>HOME</h1>
-              <div>
-                <img src="/images/lily-banse--YHSwy6uqvk-unsplash.jpg" alt="" />
+              <h1>REST-Rant</h1>
+              <div>     
+                <img src="/images/lily-banse--YHSwy6uqvk-unsplash.jpg" alt="restaurant cuisine" />
+                <img src="/images/thai-food.jpg" alt="Thai food" />
+                <img src="/images/cafe-food.jpg" alt="Cafe Food" />
               </div>
               <p>
                 <a href="/places">

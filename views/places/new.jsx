@@ -2,13 +2,14 @@
 const React = require('react')
 
 // This will include the default Html view
-const Def = require('../default')
+const Def = require('..default')
 
 // This function will contain the html for the new form
 function new_form() {
     return (
     <Def>
         <main>
+            <div>
             <h1> Add a New Place</h1>
             <form method="POST" action="/places">
                 <div className="form-group">
@@ -33,6 +34,7 @@ function new_form() {
                 </div>
                 <input className="btn btn-primary" type="submit" name="submit" value="Add Place" />
             </form>
+         </div>   
         </main>
     </Def>
     )

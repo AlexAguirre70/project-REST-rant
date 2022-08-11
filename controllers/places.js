@@ -22,6 +22,7 @@ router.post('/', (req, res) => {
     if (!req.body.state) {
       req.body.state = 'USA'
     }
+    req.body.key = places.length+1
     places.push(req.body)
     res.redirect('/places')
 })

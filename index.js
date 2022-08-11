@@ -1,5 +1,6 @@
 //includes express to be used in the file
 const express= require('express')
+const bodyParser= require('body-parser')
 
 // intializes the express and assigns it to the app variable
 const app = express()
@@ -10,6 +11,8 @@ require('dotenv').config()
 // includes the route controller js files
 // The use method tells it that when the pathname is given '/places' in the URL to acess the router js file 
 app.use('/places',require('./controllers/places'))
+// This will run the body parser for the form being submitted ane encrypts the data being sent
+app.use(express.urlencoded({extended: true}))
 
 //middleware set views engine
 // the set method tells the server to set the view engine as the default for jsx type files
@@ -25,10 +28,11 @@ app.use(express.static('public'))
 app.get('/',(req,res)=>{
     res.render('home')
 })
+
+
 //This is the GET path for the views where the path does not exist. it tells it to render the error404.jsx view
 app.get('*',(req,res)=>{
     res.render('error404')
-
 })  
 
 

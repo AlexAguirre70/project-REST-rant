@@ -2,7 +2,7 @@
 const React = require('react')
 
 // This will include the default Html view
-const Def = require('..default')
+const Def = require('../default')
 
 // This function will contain the html for the new form
 function new_form() {

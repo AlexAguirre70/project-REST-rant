@@ -21,3 +21,10 @@ img {
     margin: 20px;
     border-radius: 15px;
 }
+div label {
+    text-align: left;
+}
+input [type=text] {
+    width: 300px;
+
+}

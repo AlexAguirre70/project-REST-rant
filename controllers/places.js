@@ -25,6 +25,11 @@ router.get('/',(req,res)=>{
 router.get('/new', (req,res)=>{
     res.render('places/new')
   })
+  // This is form post route
+  router.post('/', (req,res)=>{
+    res.send('we have posted the form')
+  })
+
 
 //this allows it to be included in other jsx views
 module.exports = router

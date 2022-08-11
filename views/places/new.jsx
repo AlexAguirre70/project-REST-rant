@@ -9,10 +9,34 @@ function new_form(){
     return(
     <Def>
         <main>
-            <div>
-                <h1> Add a New Place</h1>
-            </div>
+            <h1> Add a New Place</h1>
+                <form method="POST" action="/places">
+                    <div className='form-group'>
+                        <label htmlFor="name">Place Name</label>                  
+                        <input className="form-control" type="text" name="name" id="name" />
+                    </div>   
+                    <div className='form-group'>   
+                        <label htmlFor="pic">Place Picture</label>
+                        <input  className="form-control" type="url" name="pic" id="pic" />
+                    </div>
+                    <div className='form-group'>      
+                        <label htmlFor="cuisines" required>Cuisines</label>
+                        <input  className="form-control" type="text" name="cuisines" id="cuisines" />
+                    </div>    
+                    <div className='form-group'>   
+                        <label htmlFor="city">Place City</label>
+                        <input  className="form-control" type="text" name="city" id="city"/>
+                    </div>    
+                    <div className='form-group'>     
+                        <label htmlFor="state">Place State</label>
+                        <input  className="form-control" type="text" name="state" id="state" />
+                    </div>
+                    <div className='form-group'>       
+                        <input type="submit" className='btn btn-primary' value="Add Place"/>
+                    </div>
+                </form>
         </main>
+  
     </Def>
     )
 }

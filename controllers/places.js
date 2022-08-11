@@ -21,6 +21,11 @@ router.get('/',(req,res)=>{
       //this renders the index.jsx html within the places views and passes the array as a the data parameter
     res.render('places/index',{places})
 })
+// This is new form view route
+router.get('/new', (req,res)=>{
+    res.render('places/new')
+  })
+
 //this allows it to be included in other jsx views
 module.exports = router
 

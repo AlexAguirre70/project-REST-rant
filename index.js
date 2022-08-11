@@ -25,15 +25,12 @@ app.use(express.static('public'))
 app.get('/',(req,res)=>{
     res.render('home')
 })
-
-//This is the GET path for the places sub-directory insisde the views folder tells it to render the index.jsx view 
-app.get('/places', (req,res)=>{
-    res.render('places/index')
-})
 //This is the GET path for the views where the path does not exist. it tells it to render the error404.jsx view
 app.get('*',(req,res)=>{
     res.render('error404')
 
-})
+})  
+
+
 //This tells the server to listen on the port provided in the dotenv file. it is access through the process.env method
 app.listen(process.env.PORT)

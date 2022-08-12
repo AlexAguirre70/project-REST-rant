@@ -1,5 +1,4 @@
-// This includes the REACT middleware that allows us to write html and JS in server side rendering
-const React = require('react')
+const React = require('react')  // This includes the REACT middleware that allows us to write html and JS in server side rendering
 
 //The Default function that writes the basic view html framwework, pulls in bootstrap css and the custom css stylesheets
 function Def (html) {
@@ -11,11 +10,17 @@ function Def (html) {
                 <link rel="stylesheet" href="../css/style.css" />
             </head>
             <body>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/places">Places</a></li>
+                        <li><a href="/places/new">Add a Place</a></li>
+                    </ul>
+                </nav>
                 {html.children}
             </body>
         </html>
     )
   }
-// Exports the Default module to be able to use in other views
-module.exports = Def
 
+module.exports = Def   // Exports the Default module to be able to use in other views

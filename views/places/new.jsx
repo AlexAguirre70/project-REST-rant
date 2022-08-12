@@ -1,17 +1,15 @@
-// This will include REACCT to render the jsx view
-const React = require('react')
+const React = require('react')  //This will include REACCT to render the jsx view
 
-// This will include the default Html view
-const Def = require('../default')
+const Def = require('../default')  //This will include the default Html view
 
 // This function will contain the html for the new form
 function new_form() {
     return (
     <Def>
         <main>
-            <div>
-            <h1> Add a New Place</h1>
+         <div className="newform">
             <form method="POST" action="/places">
+            <h1> Add a New Place</h1>
                 <div className="form-group">
                     <label htmlFor="name">Place Name</label>
                     <input className="form-control" id="name" name="name" required />
@@ -40,5 +38,4 @@ function new_form() {
     )
 }
 
-// This will export the file to be included in other views
-module.exports = new_form
+module.exports = new_form  //This will export the file to be included in other views

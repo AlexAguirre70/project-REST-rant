@@ -1,6 +1,7 @@
 h1 {
     text-align: center;
-    color: cornflowerblue;
+    color: #ff6c2c;
+    margin-top: 15px;
   }
 button {
     font-size: 1.25em;
@@ -8,7 +9,13 @@ button {
     padding: 10px;
     background-color: #ff6c2c;
     color: white;
+    border-color: black;
+    border-radius: 8px;
 
+}
+button:hover {
+    background-color: white;
+    color: #ff6c2c;
 }
 
 div, p {
@@ -21,10 +28,65 @@ img {
     margin: 20px;
     border-radius: 15px;
 }
-div label {
-    text-align: left;
-}
-input [type=text] {
-    width: 300px;
 
+nav {
+    background-color: #ff6c2c;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 25px;
+}
+
+nav a {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ff6c2c;
+    text-decoration: none;
+    background-color: white;
+}
+
+body {
+    background-color: lightgray;
+    text-align: center;
+  }
+  
+  main {
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: white;
+  }
+  form {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  label {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  input{
+    margin-bottom: 15px;
+  }
+input.form-control{
+    background-color: whitesmoke;
+    border-color: #ff6c2c;
+} 
+input[type=submit]{
+    background-color:#ff6c2c;
+    width: 200px;
+    padding:10px;
+    font-weight: 600;
+    border-color: black;
 }

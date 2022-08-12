@@ -7,9 +7,6 @@ const app = express() // intializes the express and assigns it to the app variab
 
 require('dotenv').config() // includes the dotenv environment variables
 
-// includes the route controller js files
-
-
 app.use(express.urlencoded({extended: true})) // This will run the body parser for the form being submitted ane encrypts the data being sent
 
 //middleware set views engine

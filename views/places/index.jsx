@@ -1,8 +1,6 @@
-// This includes the React middleware to render views via the server
-const React = require('react')
+const React = require('react')  //This includes the React middleware to render views via the server
 
-// This includes the default html views frameworks
-const Def = require('../default')
+const Def = require('../default') //This includes the default html views frameworks
 
 // The function to render the index page for detail views. It loops through using the map function to display all items included
 function index (data) {
@@ -33,5 +31,4 @@ function index (data) {
 )
 }
 
-//This makes the view detail index page available 
-module.exports = index
+module.exports = index  //This makes the view detail index page available 

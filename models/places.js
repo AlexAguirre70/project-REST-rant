@@ -10,6 +10,6 @@ module.exports = [{
     name: 'Coding Cat Cafe',
     city: 'Phoenix',
     state: 'AZ',
-    cuisines: 'Coffee, Bakery',
+    cuisines: 'Coffee, Breakfast',
     pic: '/images/cafe-food.jpg'
 }]

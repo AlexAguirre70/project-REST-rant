@@ -1,21 +1,19 @@
 const express= require('express') //includes express to be used in the file
 const bodyParser= require('body-parser')
 
-
 const app = express() // intializes the express and assigns it to the app variable
-
-
 require('dotenv').config() // includes the dotenv environment variables
+const methodOverride= require('method-override')// This will load the method override for all other routes than GET or POSt
 
-app.use(express.urlencoded({extended: true})) // This will run the body parser for the form being submitted ane encrypts the data being sent
+
 
 //middleware set views engine
-
 app.set("views", __dirname + "/views");
 app.set('view engine','jsx')  // the set method tells the server to set the view engine as the default for jsx type files
 app.engine('jsx',require('express-react-views').createEngine()) // the engine methods tell is that for all jsx extnesion file to use React views. the CreatEgine actually creates and intializes the view engine
 app.use(express.static('public'))  // this use tell the server that for all static (non-dynamic info) to access the public folder
-
+app.use(express.urlencoded({extended: true})) // This will run the body parser for the form being submitted ane encrypts the data being sent
+app.use(methodOverride('_method'))
 
 app.use('/places',require('./controllers/places')) // The use method tells it that when the pathname is given '/places' in the URL to acess the router js file 
 

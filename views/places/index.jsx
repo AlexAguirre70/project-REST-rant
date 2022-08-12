@@ -27,7 +27,7 @@ function index (data) {
             </div>
             <p>
                 <a href="/places/new">
-                    <button>Add Your Restaurant</button>
+                    <button id='addBtn'>Add Your Restaurant</button>
                 </a>
               </p>
         </main>

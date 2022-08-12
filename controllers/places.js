@@ -22,7 +22,7 @@ router.get('/:id', (req,res)=>{
       res.render('error404')
     }
     else {
-    res.render('places/show',{place: places[id]} )
+    res.render('places/show',{place: places[id],id} )
     }
 })  
  //create new place via post 
@@ -40,6 +40,20 @@ router.post('/', (req, res) => {
     req.body.key = places.length+1
     places.push(req.body)
     res.redirect('/places')
+})
+//This will Delete the places
+router.delete('/:id', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    places.splice(id,1)
+    res.redirect('/places')
+  }
 })
 
 module.exports = router  //this allows it to be included in other jsx views

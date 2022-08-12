@@ -66,6 +66,7 @@ body {
     text-align: center;
     margin-right: 20px;
     margin-left: 20px;
+    margin-top: 0px;
     background-color: white;
   }
   form {
@@ -89,4 +90,38 @@ input[type=submit]{
     padding:10px;
     font-weight: 600;
     border-color: black;
+}
+div.detailpic{
+    display: inline-flex;
+    width: 40%;
+}
+div.info{
+    display: inline-block;
+    width: 40%;
+}
+div.rants{
+    margin-top: 25px;
+    display: inline-block;
+}
+#editSec{
+    display: inline-flex;
+    align-items: baseline;
+    vertical-align: bottom;
+
+}
+#delBtn {
+    background-color: red;
+    width: 100px;
+    padding: 5px;
+   
+}
+#editBtn{
+    background-color: cornflowerblue;
+    width: 100px;
+    vertical-align: top;
+    padding: 5px;
+    font-weight: 600;
+}
+#addBtn, #placeBtn{
+    margin-bottom: 20px;
 }

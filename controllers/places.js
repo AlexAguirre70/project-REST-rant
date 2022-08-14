@@ -41,6 +41,7 @@ router.post('/', (req, res) => {
     places.push(req.body)
     res.redirect('/places')
 })
+
 // This will be the edit route
 router.get('/:id/edit', (req, res) => {
   let id = Number(req.params.id)
@@ -51,7 +52,7 @@ router.get('/:id/edit', (req, res) => {
       res.render('error404')
   }
   else {
-    res.render('places/edit', { place: places[id] })
+    res.render('places/edit',{place: places[id]})
   }
 })
 
@@ -77,9 +78,10 @@ router.put('/:id', (req, res) => {
           req.body.state = 'USA'
       }
       // Save the new data into places[id]
-      places[id] = req.body
+            places[id] = req.body
       res.redirect(`/places/${id}`)
   }
+ 
 })
 
 //This will Delete the places

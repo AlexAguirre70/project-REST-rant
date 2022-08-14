@@ -104,23 +104,27 @@ div.rants{
     display: inline-block;
 }
 #editSec{
-    display: inline-flex;
-    align-items: baseline;
-    vertical-align: bottom;
-
+    display:inline-block;
+    max-height: 50px;
+   
 }
 #delBtn {
+    display: block;
     background-color: red;
     width: 100px;
     padding: 5px;
-   
+    margin: auto;
+      
 }
 #editBtn{
+    display: block;
     background-color: cornflowerblue;
     width: 100px;
-    vertical-align: top;
     padding: 5px;
+    max-height: 40px;
     font-weight: 600;
+    margin: auto;
+
 }
 #addBtn, #placeBtn, #saveBtn {
     margin-bottom: 20px;

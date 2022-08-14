@@ -84,7 +84,7 @@ input.form-control{
     background-color: whitesmoke;
     border-color: #ff6c2c;
 } 
-input[type=submit]{
+input[type=submit] {
     background-color:#ff6c2c;
     width: 200px;
     padding:10px;

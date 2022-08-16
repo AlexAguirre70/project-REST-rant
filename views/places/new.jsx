@@ -29,11 +29,17 @@ function new_form() {
                     <label htmlFor="state">State</label>
                     <input className="form-control" id="state" name="state" />
                 </div>
-            </div>    
-                <div className="form-group">
+            </div> 
+            <div className='row'>   
+                <div className="form-group col-sm-6">
                     <label htmlFor="cuisines">Cuisines</label>
                     <input className="form-control" id="cuisines" name="cuisines" required />
                 </div>
+                <div className="form-group col-sm-6">
+                    <label for="founded">Founded Year</label>
+                    <input className="form-control" id="founded" name="founded" />
+                </div>
+            </div>    
                 <input className="btn btn-primary" type="submit" name="submit" value="Add Place" />
             </form>
          </div>   

@@ -4,7 +4,7 @@ const bodyParser= require('body-parser')
 const app = express() // intializes the express and assigns it to the app variable
 require('dotenv').config() // includes the dotenv environment variables
 const methodOverride= require('method-override')// This will load the method override for all other routes than GET or POSt
-
+const mongoose=require('mongoose')
 
 
 //middleware set views engine

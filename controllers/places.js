@@ -24,7 +24,6 @@ router.post('/', (req, res) => {
     res.render('error404')
   })
 })
-
 router.get('/new', (req, res) => {
   res.render('places/new')
 })
@@ -32,7 +31,18 @@ router.get('/new', (req, res) => {
 router.get('/:id', (req, res) => {
   db.Place.findById(req.params.id)
   .then(place =>{
-    res.render('./places/show',{place})
+    res.render('places/show',{place})
+  })
+  .catch(err=>{
+    console.log(err)
+    res.render('error404')
+  })
+})
+// Missing from the Assignments
+router.get('/:id/edit', (req, res) => {
+  db.Place.findById(req.params.id)
+  .then(place =>{
+     res.render('places/edit',{place})
   })
   .catch(err=>{
     console.log(err)
@@ -41,17 +51,31 @@ router.get('/:id', (req, res) => {
 })
 
 router.put('/:id', (req, res) => {
-  res.send('PUT /places/:id stub')
+  db.Place.findByIdAndUpdate(req.params.id,req.body)
+  .then(place =>{  
+      console.log(`We have Updated the info for ${req.body.name}`)
+      res.redirect(`/places/${req.params.id}`)  
+  })
+  .catch(err=>{
+    console.log(err)
+    res.render('error404')
+  }
+    )
 })
 
 router.delete('/:id', (req, res) => {
-  res.send('DELETE /places/:id stub')
+  db.Place.findByIdAndDelete(req.params.id)
+  .then(place=>{
+    console.log(`The record for ${req.params.id} has been deleted`)
+    res.redirect('/places')
+  })
+  .catch(err=>{
+    console.log(err)
+    res.render('error404')
+  })
 })
 
-router.get('/:id/edit', (req, res) => {
-  res.send('GET edit form stub')
-})
-
+// Next Assignment
 router.post('/:id/rant', (req, res) => {
   res.send('GET /places/:id/rant stub')
 })

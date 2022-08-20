@@ -15,6 +15,9 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+  if(!req.body.pic){
+    req.body.pic="../images/NoImageFound.png"
+  }
   db.Place.create(req.body)
   .then(()=>{
     res.redirect('/places')

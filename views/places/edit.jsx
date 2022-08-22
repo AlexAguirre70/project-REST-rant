@@ -28,10 +28,16 @@ function edit_form(data){
                     <input className="form-control" id="editState" name="state" defaultValue={data.place.state}/>
                 </div>
             </div>
-                <div className="form-group">
+            <div className='row'>
+                <div className="form-group col-sm-6">
                     <label htmlFor="cuisines">Cuisines</label>
                     <input className="form-control" id="editCuisines" name="cuisines" defaultValue={data.place.cuisines} required />
                 </div>
+                <div className="form-group col-sm-6">
+                    <label htmlFor="founded">Founded Year</label>
+                    <input type="number" className="form-control" id="founded" name="founded" defaultValue={data.place.founded}/>
+                </div>
+            </div>
                 <input className="form-control" id="editId" name="id" defaultValue={data.place.id} required hidden/>
                 <input className="btn btn-primary" type="submit" name="saveBtn" id="saveBtn" value="Save Edits" />
             </form>

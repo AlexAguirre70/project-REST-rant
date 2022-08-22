@@ -3,13 +3,20 @@ const React = require('react')  //This will include REACCT to render the jsx vie
 const Def = require('../default')  //This will include the default Html view
 
 // This function will contain the html for the new form
-function new_form() {
+function new_form(data) {
+    let message =''
+    if(data.message){
+        message =<h4 className='alert alert-danger'>
+         {data.message}   
+        </h4>
+    }
     return (
     <Def>
         <main>
          <div className="newform">
             <form method="POST" action="/places">
             <h1> Add a New Place</h1>
+                {message}
             <div className='row'>
                 <div className="form-group col-sm-6">
                     <label htmlFor="name">Place Name</label>
@@ -37,8 +44,8 @@ function new_form() {
                 </div>
                 <div className="form-group col-sm-6">
                     <label htmlFor="founded">Founded Year</label>
-                    <input className="form-control" id="founded" name="founded"/>
-                                    </div>
+                    <input type="number" className="form-control" id="founded" name="founded" value={new Date().getFullYear()}/>
+                </div>
             </div>    
                 <input className="btn btn-primary" type="submit" name="submit" value="Add Place" />
             </form>

@@ -9,8 +9,8 @@ const placeSchema= new mongoose.Schema({
     state: {type:String, default:'USA'},
     founded: {        
         type:Number,
-        min: [1673, 'Surely Not that old?'],
-        max: [new Date().getFullYear(), "Hey, This is a year into the future!"]
+        min: [1673, ' Surely Not that old?'],
+        max: [new Date().getFullYear(), " Hey, The founded year is into the future!"]
     }
 })
 

@@ -6,7 +6,9 @@ function show(data){
     <Def>
         <main>
             <section> 
-            <div className='detailpic'><img src={`..${data.place.pic}`} alt="restaurant" width="50%"/>
+            <div className='detailpic'>
+                <img src={`..${data.place.pic}`} alt="restaurant" width="50%"/><br />
+                <h3><span className="caption"> Located in {data.place.city},{data.place.state} </span></h3>
             </div>
             <div className='info'>
                 <h1>{data.place.name}</h1>

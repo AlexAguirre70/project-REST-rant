@@ -92,8 +92,9 @@ input[type=submit] {
     border-color: black;
 }
 div.detailpic{
-    display: inline-flex;
+    display: inline-block;
     width: 40%;
+    align-items: center;
 }
 div.info{
     display: inline-block;
@@ -131,4 +132,3 @@ div.rants{
 #addBtn, #placeBtn, #saveBtn {
     margin-bottom: 20px;
 }
-

@@ -77,12 +77,14 @@ body {
     font-weight: 600;
     margin-bottom: 5px;
   }
-  input{
+  input {
     margin-bottom: 15px;
   }
-input.form-control{
-    background-color: whitesmoke;
+input.form-control, textarea:valid {
+    
     border-color: #ff6c2c;
+    border-style: solid;
+    border-width: 1px;
 } 
 input[type=submit] {
     background-color:#ff6c2c;
@@ -103,6 +105,7 @@ div.info{
 div.rants{
     margin-top: 25px;
     display: inline-block;
+    width: auto;
 }
 #editSec{
     display:inline-block;
@@ -117,7 +120,7 @@ div.rants{
     margin: auto;
       
 }
-#editBtn{
+#editBtn {
     display: block;
     background-color: #ff6c2c;
     border-color: black;
@@ -131,4 +134,37 @@ div.rants{
 }
 #addBtn, #placeBtn, #saveBtn {
     margin-bottom: 20px;
+}
+#newCmtBtn {
+    display: block;
+    background-color: #ff6c2c;
+    border-color: black;
+    color: white;
+    width: 200px;
+    padding: 5px;
+    max-height: 40px;
+    font-weight: 600;
+    margin: auto;
+
+}
+.borderbox{
+    display: inline-flex;
+    margin:10px;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-color: #ff6c2c;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 8px;
+    width: 30%;
+}
+#rant{
+    margin-left: 10px;
+}
+#stars {
+    display: inline-block;
+    align-self: center;
+    width: 150px;
+    margin-left: 20px;
+    
 }

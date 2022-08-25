@@ -2,6 +2,25 @@ const React = require('react')
 const Def = require('../default')
 
 function show(data){
+    let comments = (
+        <h3 className='inactive'>No Comments Yet</h3>
+    )
+    if (data.place.comments.length){
+        comments=data.place.comments.map( c=>{
+            return(
+            <div className='borderbox'>   
+                <div className='border'>
+                    <h2 style={{color: '#ff6c2c' }} className='rant'>{c.rant ? 'Rant! ':"Rave!"}</h2>
+                    <h4>{c.content}</h4>
+                    <h3>
+                        <strong> - {c.author}</strong>
+                    </h3>
+                    <h4 style={{color: '#ff6c2c'}}>Rating: {c.stars}</h4>
+                </div>
+            </div>    
+            )
+        })
+    }
     return(
     <Def>
         <main>
@@ -29,7 +48,12 @@ function show(data){
             <section>
             <div className='rants'>
                 <h2>Comments</h2>
-                <p>No Comments to show</p>   
+                <div id="editCmt">
+                    <a href={`/places/${data.place.id}/addcomments`} className='btn btn-warning' id='newCmtBtn'>Add Comment</a>
+                </div>
+                {comments}
+
+
             </div>
             </section>
         </main>

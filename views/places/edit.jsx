@@ -2,12 +2,13 @@ const React = require('react')
 const Def = require('../default')
 
 function edit_form(data){
-      return (
+          return (
         <Def>
             <main>
             <div className="newform">
             <form method="POST" action={`/places/${data.place.id}?_method=PUT`}>
                 <h1>Edit Place </h1> 
+                
             <div className='row'>
                 <div className="form-group col-sm-6">
                     <label htmlFor="name">Place Name</label>

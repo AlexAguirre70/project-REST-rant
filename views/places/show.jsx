@@ -5,7 +5,17 @@ function show(data){
     let comments = (
         <h3 className='inactive'>No Comments Yet</h3>
     )
+    let rating =(
+        <h3 className='inactive'>Not Rated Yet. Be the first</h3>
+    )
     if (data.place.comments.length){
+        let sumRatings= data.place.comments.reduce((tot,c)=>{
+            return tot+c.stars
+        },0)
+        let averageRating = sumRatings/data.place.comments.length
+            rating =( 
+                <h3 style={{color: '#FFB900'}}>{Math.round(averageRating)} Stars</h3>
+            )
         comments=data.place.comments.map( c=>{
             return(
             <div className='borderbox'>   
@@ -31,9 +41,9 @@ function show(data){
             </div>
             <div className='info'>
                 <h1>{data.place.name}</h1>
-                <h2>Rating</h2>
-                <p>No Ratings Available</p>
-                <h2>Description</h2>
+                <h4>Average Rating</h4>
+                {rating}
+                <h4>Description</h4>
                 <p>{data.place.showEstablished()}</p>
                 <p>Serving {data.place.cuisines}</p>            
                 
@@ -47,7 +57,7 @@ function show(data){
             </div>    
             <section>
             <div className='rants'>
-                <h2>Comments</h2>
+                <h4>Comments</h4>
                 <div id="editCmt">
                     <a href={`/places/${data.place.id}/addcomments`} className='btn btn-warning' id='newCmtBtn'>Add Comment</a>
                 </div>
